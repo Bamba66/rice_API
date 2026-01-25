@@ -1,0 +1,20 @@
+version: "3.8"
+
+# Run All Services
+services:
+
+  # Prediction API Service
+  prediction_service:
+    build: ./prediction_service
+    container_name: rice_api_prediction_service
+    ports:
+      - "8000:8000"
+
+  # Streamlit UI Service
+  ui_service:
+    build: ./ui_service
+    container_name: rice_ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - prediction_service
