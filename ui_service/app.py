@@ -110,7 +110,9 @@ st.markdown("---")
 # URL de l'API
 # -----------------------------
 #API_URL = "http://localhost:8000/predict"
-API_URL = "http://prediction_service:8000/predict"
+#API_URL = "http://prediction_service:8000/predict"
+
+API_URL = "https://rice-api-prediction-mqbf.onrender.com/predict"
 
 
 
