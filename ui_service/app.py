@@ -122,7 +122,7 @@ API_URL = "https://rice-api-prediction-mqbf.onrender.com/predict"
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    st.markdown('<h2>📁 Upload votre image</h2>', unsafe_allow_html=True)
+    st.markdown('<h2> Upload votre image</h2>', unsafe_allow_html=True)
     uploaded_file = st.file_uploader(
         "Choisissez une image de riz (JPG, PNG)", 
         type=["jpg", "png", "jpeg"],
@@ -130,7 +130,7 @@ with col1:
     )
 
 with col2:
-    st.markdown('<h2>🚀 Prédiction</h2>', unsafe_allow_html=True)
+    st.markdown('<h2> Prédiction</h2>', unsafe_allow_html=True)
 
 if uploaded_file is not None:
     # Affichage de l'image amélioré
@@ -139,7 +139,7 @@ if uploaded_file is not None:
     
     # Bouton Predict premium
     if st.button("🔮 **Prédire le type de riz**", type="primary"):
-        with st.spinner("Analyse en cours... 🌾"):
+        with st.spinner("Analyse en cours... "):
             files = {"file": uploaded_file.getvalue()}
             try:
                 response = requests.post(API_URL, files=files, timeout=30)
@@ -150,7 +150,7 @@ if uploaded_file is not None:
                     # CARD RÉSULTAT PRINCIPAL
                     st.markdown("""
                     <div class="result-card">
-                        <h2>✅ Résultat de la prédiction</h2>
+                        <h2>Résultat de la prédiction</h2>
                     """, unsafe_allow_html=True)
                     
                     col_r1, col_r2 = st.columns(2)
@@ -184,16 +184,16 @@ if uploaded_file is not None:
                     st.markdown("</div>", unsafe_allow_html=True)
                     
                     # Détails des probas en tableau
-                    st.markdown("### 📊 Détails des probabilités")
+                    st.markdown("### Détails des probabilités")
                     df_probs = [{"Classe": k, "Probabilité": f"{v:.2%}"} for k, v in probs.items()]
                     st.dataframe(df_probs, use_container_width=True)
                 
                 else:
-                    st.error(f"❌ Erreur API: {response.status_code} - {response.text}")
+                    st.error(f" Erreur API: {response.status_code} - {response.text}")
             except requests.exceptions.RequestException as e:
-                st.error(f"❌ Impossible de contacter l'API: {str(e)}")
+                st.error(f"Impossible de contacter l'API: {str(e)}")
 else:
-    st.info("👆 Upload une image pour commencer la classification !")
+    st.info(" Upload une image pour commencer la classification !")
 
 # -----------------------------
 # FOOTER
@@ -201,6 +201,6 @@ else:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666; padding: 2rem;'>
-    <p>🍚 Projet ADM 2025 - Université de Thiès | Powered by ResNet50 Transfer Learning</p>
+    <p> Projet ADM 2025 - Université de Thiès | Powered by MobileNetV2 Transfer Learning</p>
 </div>
 """, unsafe_allow_html=True)
