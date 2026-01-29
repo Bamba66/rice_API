@@ -1,4 +1,4 @@
-# 🎯 Classification de types de riz - Projet Deep Learning
+# Classification de types de riz - Projet Analyses de Données Massives
 
 ## 1. Présentation du projet
 
@@ -14,7 +14,7 @@ Ce projet a pour objectif de :
 
 ---
 
-## 🧠 2. Technologies utilisées
+## 2. Technologies utilisées
 
 - Python 3.10
 - TensorFlow / Keras
@@ -27,7 +27,7 @@ Ce projet a pour objectif de :
 
 ---
 
-## 📁 3. Structure du projet
+##  3. Structure du projet
 
 ```
 rice_API/
@@ -53,9 +53,9 @@ rice_API/
 
 ---
 
-## ⚙️ 4. Installation locale
+##  4. Installation locale
 
-### ✅ Prérequis
+###  Prérequis
 
 - Python 3.10 ou supérieur
 - Git
@@ -86,7 +86,7 @@ cd prediction_service
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-📄 **Documentation API** : http://localhost:8000/docs
+ **Documentation API** : http://localhost:8000/docs
 
 ### 5.2 Démarrer Streamlit
 
@@ -95,11 +95,11 @@ cd ui_service
 streamlit run app.py
 ```
 
-🌐 **Interface web** : http://localhost:8501
+**Interface web** : http://localhost:8501
 
 ---
 
-## 🐳 6. Dockerisation
+## 6. Dockerisation
 
 ### Lancer avec Docker Compose (recommandé)
 
@@ -113,7 +113,7 @@ Cette commande lance automatiquement :
 
 ---
 
-## 🚀 7. Déploiement sur Render
+## 7. Déploiement sur Render
 
 ### Pour déployer :
 
@@ -145,7 +145,7 @@ Ouvre dans ton navigateur :
 
 ---
 
-## 📊 9. Résultats du modèle
+## 9. Résultats du modèle
 
 - **Modèle** : MobileNetV2 (Transfer Learning)
 - **Accuracy interne** : 100% sur le jeu de test
@@ -154,7 +154,7 @@ Ouvre dans ton navigateur :
 
 ---
 
-## 👥 Auteurs
+## Auteurs
 
 **Groupe B - Master 2 Génie Logiciel**
 - Cheikhouna GUEYE
