@@ -18,3 +18,5 @@ services:
       - "8501:8501"
     depends_on:
       - prediction_service
+    environment:
+      - API_URL=http://prediction_service:8000/predict
